@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    background-color: #0D1526;
+}
+
+/* Header - Navigation */
+
+header {
+    height: 8rem;
+    width: 100%;
+    max-width: 1440px;
+    background: linear-gradient(#0D1526, #192340);
+    display: grid;
+    grid-template-areas:'. nav';
+    grid-template-columns: 50% 50% 
+
+}
+
+header nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+
+}
+
+header nav ul {
+    list-style: none;
+    gap: 3rem;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #BFBDF2;
+    font-size: 2.5rem;
+    font-family: 'Share Tech', sans-serif;
+}
+
+header nav ul li:hover {
+    background: #48468C;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px #574382;
+}
+
+/* Main */
+
+.container-background {
+    background: url(background1440.jpg) repeat;
+    animation: blink 30s infinite ease-in-out;
+    animation: is-panning 20s infinite ease-in-out;
+    background-position: 100vw;
+    width: 100%;
+    max-width: 1440px;
+    height: 87vh;
+    position: absolute;
+}
+
+.container-border-content {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 500px;
+    width: 80%;
+    left: 120px;
+    top: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #192340;
+}
+
+.container-text h1, .container-text h2, .container-text h3, .container-text p {
+    color: white;
+    position: absolute;
+    left: 100px;
+}
+
+.container-text h1 {
+    font-size: 4.5rem;
+    top: 140px;
+    font-family: monospace;    
+}
+
+.container-text h2 {
+    font-size: 4.5rem;
+    top: 210px;
+    font-family: monospace;
+}
+
+.container-text h3 {
+    font-size: 4.5rem;
+    top: 280px;
+    font-family: monospace;
+}
+
+.container-text p {
+    font-size: 2.2rem;
+    top: 350px;
+    max-width: 50%;
+    font-family: monospace;
+}
+
+.container-myimage {
+    background: url(logo.jpg) no-repeat;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border: 2px solid #48468C;
+    border-radius: 50%;
+    right: 150px;
+    top: 100px;
+}
+
+/* Keywords */
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+
+}
+
+@keyframes is-panning {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
